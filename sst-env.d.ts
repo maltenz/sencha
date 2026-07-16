@@ -6,6 +6,10 @@
 
 declare module "sst" {
   export interface Resource {
+    "SenchaSite": {
+      "type": "sst.cloudflare.StaticSite"
+      "url": string
+    }
   }
 }
 
