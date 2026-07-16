@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "sst dev",
+    "dev:site": "bunx browser-sync start --server website --port 3000 --files \"website/**/*\" --host 127.0.0.1 --no-open",
     "deploy": "sst deploy",
     "deploy:prod": "sst deploy --stage production",
     "remove": "sst remove",
@@ -11,6 +12,7 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "browser-sync": "^3.0.4",
     "typescript": "^5"
   },
   "dependencies": {
