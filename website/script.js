@@ -18,6 +18,21 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
 
+const bindPosterContain = media => {
+  if (!(media instanceof HTMLMediaElement)) return;
+
+  const clearPosterContain = () => {
+    media.classList.remove('poster-contain');
+  };
+
+  media.addEventListener('playing', clearPosterContain, { once: true });
+  media.addEventListener('loadeddata', () => {
+    if (!media.paused && !media.ended) clearPosterContain();
+  });
+};
+
+document.querySelectorAll('.hero-video, .vision-video').forEach(bindPosterContain);
+
 const bindAudioToggle = audioToggle => {
   const videoId = audioToggle.getAttribute('data-audio-for');
   if (!videoId) return;
