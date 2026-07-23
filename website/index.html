@@ -24,15 +24,21 @@
 
     <main id="top">
       <section class="hero">
-        <div class="hero-photo" aria-hidden="true"><img src="images/sencha-performing.png" alt="" /></div>
+        <div class="hero-photo" aria-hidden="true">
+          <video id="hero-video" class="hero-video" src="images/sencha-peak-web.mp4" autoplay muted loop playsinline preload="metadata" poster="images/sencha-peak-poster.jpg"></video>
+        </div>
         <div class="hero-ornament ornament-left" aria-hidden="true"></div>
         <div class="hero-ornament ornament-right" aria-hidden="true"></div>
+        <button class="audio-toggle" type="button" data-audio-for="hero-video" aria-pressed="false" aria-label="Turn on sound">
+          <span class="audio-icon" aria-hidden="true">🔇</span>
+          <span class="audio-label">Sound Off</span>
+        </button>
         <div class="eyebrow"><span></span> Hawke's Bay, New Zealand <span></span></div>
         <p class="hero-kicker">Curated sound for beautiful rooms</p>
         <h1>Sonic Elegance.<br /><em>Timeless Allure.</em></h1>
         <p class="hero-intro">The premium soundscape for Hawke’s Bay’s finest venues.</p>
         <a class="circle-link" href="#sound"><span>Discover<br />the mood</span><i>↓</i></a>
-        <p class="hero-caption">Ambient Jazz · Blues &amp; Soul · Sultry R&amp;B</p>
+        <p class="hero-caption">Future Retro · Blues &amp; Soul · Sultry R&amp;B</p>
       </section>
 
       <section class="statement reveal">
@@ -54,8 +60,8 @@
           <article class="sound-card reveal">
             <span class="number">01</span>
             <div class="vinyl vinyl-one" aria-hidden="true"></div>
-            <h3>Ambient<br />Cigar Bar Lounge</h3>
-            <p>Rich textures, muted trumpets, and slow-dripping vinyl crackle.</p>
+            <h3>Future Retro<br />Electronic Pop</h3>
+            <p>Glossy synth hooks, warm analog basslines, and cinematic neon momentum.</p>
           </article>
           <article class="sound-card reveal">
             <span class="number">02</span>
@@ -73,8 +79,12 @@
       </section>
 
       <section id="vision" class="vision">
-        <div class="vision-art reveal" aria-hidden="true">
-          <img src="images/sencha-portrait.jpg" alt="" />
+        <div class="vision-art reveal">
+          <video id="vision-video" class="vision-video" src="images/jam-web.mp4" autoplay muted loop playsinline preload="none" poster="images/jam-web-poster.png"></video>
+          <button class="audio-toggle vision-audio-toggle" type="button" data-audio-for="vision-video" aria-pressed="false" aria-label="Turn on sound">
+            <span class="audio-icon" aria-hidden="true">🔇</span>
+            <span class="audio-label">Sound Off</span>
+          </button>
           <div class="portrait-monogram">S</div>
         </div>
         <div class="vision-copy reveal">
@@ -95,7 +105,7 @@
     <footer id="contact">
       <div class="footer-top">
         <p class="overline">Private events · Residencies · Venue partnerships</p>
-        <a href="mailto:hello@djsencha.com" class="email">hello@djsencha.com <span>↗</span></a>
+        <a href="mailto:sench_sound@gmail.com" class="email">sench_sound@gmail.com <span>↗</span></a>
       </div>
       <div class="footer-bottom"><a href="#top" class="brand">SENCHA<span>•</span></a><p>Hawke’s Bay, NZ &nbsp;—&nbsp; © 2026</p></div>
     </footer>
